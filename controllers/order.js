@@ -38,7 +38,6 @@ exports.orderById = (req, res, next, id) => {
 //    });
 //  };
 
-
 // your create order method with email capabilities
 exports.create = (req, res) => {
   console.log('CREATE ORDER: ', req.body);
@@ -57,8 +56,8 @@ exports.create = (req, res) => {
       // order.products.length
       // order.amount
       const emailData = {
-          to: 'kaloraat@gmail.com', // admin
-          from: 'noreply@ecommerce.com',
+          to: 'cse19075@cemk.ac.in', // admin
+          from: 'srinjayayan1262000@gmail.com',
           subject: `A new order is received`,
           html: `
           <h1>Hey Admin, Somebody just made a purchase in your ecommerce store</h1>
@@ -92,7 +91,7 @@ exports.create = (req, res) => {
       // email to buyer
       const emailData2 = {
           to: order.user.email,
-          from: 'noreply@ecommerce.com',
+          from: 'srinjayayan1262000@gmail.com',
           subject: `You order is in process`,
           html: `
           <h1>Hey ${req.profile.name}, Thank you for shopping with us.</h1>
